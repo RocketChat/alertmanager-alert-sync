@@ -46,7 +46,7 @@ jobs:
         uses: redhat-actions/buildah-build@3a51aade9afa17e5c78256bcbe2e1ee08c7b995b # 3.0.2
         with:
           image: ${{ env.IMAGE_NAME }}
-          tags: latest v1
+          tags: ${{github.sha}}
           archs: amd64,arm64
           containerfiles: |
             ./Dockerfile
